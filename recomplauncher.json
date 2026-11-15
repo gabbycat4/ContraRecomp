@@ -1,0 +1,167 @@
+{
+    "$schema": "https://recomplauncher.com/schema/recomplauncher.json",
+    "format": 1,
+    "game": {
+        "kind": "iso",
+        "label": "Your dump of Contra (USA) for the NES, as a .nes ROM file."
+    },
+    "start": {
+        "program": [
+            "contrarecomp.exe"
+        ],
+        "args": [
+            "{game}"
+        ]
+    },
+    "settings": [
+        {
+            "id": "present_rate",
+            "label": "Pictures per second",
+            "help": "Extra pictures between the game's frames. 240 or 180 on a 240 Hz FreeSync or G-Sync monitor; 60 on a 60 Hz monitor.",
+            "in": "args",
+            "choices": [
+                {
+                    "label": "Game's option",
+                    "args": []
+                },
+                {
+                    "label": "60 (off)",
+                    "args": [
+                        "--present-rate",
+                        "60"
+                    ]
+                },
+                {
+                    "label": "120",
+                    "args": [
+                        "--present-rate",
+                        "120"
+                    ]
+                },
+                {
+                    "label": "180",
+                    "args": [
+                        "--present-rate",
+                        "180"
+                    ]
+                },
+                {
+                    "label": "240",
+                    "args": [
+                        "--present-rate",
+                        "240"
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "char_glide",
+            "label": "Character glide",
+            "help": "Bill, Lance, the soldiers and the bosses glide between the game's positions instead of hopping.",
+            "in": "args",
+            "choices": [
+                {
+                    "label": "Game's option",
+                    "args": []
+                },
+                {
+                    "label": "On",
+                    "args": [
+                        "--char-glide",
+                        "1"
+                    ]
+                },
+                {
+                    "label": "Off",
+                    "args": [
+                        "--char-glide",
+                        "0"
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "steady_shots",
+            "label": "Steady shots",
+            "help": "Draws every player shot in every frame, so they fly smoothly instead of blinking.",
+            "in": "args",
+            "choices": [
+                {
+                    "label": "Game's option",
+                    "args": []
+                },
+                {
+                    "label": "On",
+                    "args": [
+                        "--steady-shots",
+                        "1"
+                    ]
+                },
+                {
+                    "label": "Off",
+                    "args": [
+                        "--steady-shots",
+                        "0"
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "second_core",
+            "label": "Second core",
+            "help": "Runs the next NES frame on a second core while the extra pictures show. Needed above 60 pictures a second.",
+            "in": "args",
+            "choices": [
+                {
+                    "label": "Game's option",
+                    "args": []
+                },
+                {
+                    "label": "On",
+                    "args": [
+                        "--emu-thread",
+                        "1"
+                    ]
+                },
+                {
+                    "label": "Off",
+                    "args": [
+                        "--emu-thread",
+                        "0"
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "sprite_flicker",
+            "label": "No sprite flicker",
+            "help": "Draws every sprite every frame. Off shows the NES's own flicker.",
+            "in": "args",
+            "choices": [
+                {
+                    "label": "Game's option",
+                    "args": []
+                },
+                {
+                    "label": "On",
+                    "args": [
+                        "--no-sprite-limit",
+                        "1"
+                    ]
+                },
+                {
+                    "label": "Off",
+                    "args": [
+                        "--no-sprite-limit",
+                        "0"
+                    ]
+                }
+            ]
+        }
+    ],
+    "requires": [
+        "start",
+        "settings.args",
+        "settings.choices"
+    ]
+}

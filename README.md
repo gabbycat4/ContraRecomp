@@ -1,5 +1,7 @@
 # Contra Recompiled
 
+<a href="https://recomplauncher.com/game/contrarecomp"><picture><source media="(prefers-color-scheme: dark)" srcset="https://recomplauncher.com/assets/press/launcher/badge-light.svg"><img alt="Get it on RecompLauncher" src="https://recomplauncher.com/assets/press/launcher/badge-dark.svg" height="48"></picture></a>
+
 A native PC port of **Contra** (NES, USA), built with
 [NESRecomp](https://github.com/mstan/nesrecomp). The game's own 6502 code is
 recompiled to C and runs natively, cycle-accurate, at the speed of the real
